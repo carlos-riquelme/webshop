@@ -1,7 +1,6 @@
 <%@page import="cn.shopping.connection.DbCon"%>
 <%@page import="cn.shopping.model.*"%>
-<%@page import="cn.shopping.dbob.ProductDaob"%>
-<%@page import="cn.shopping.model.Product"%>
+<%@page import="cn.shopping.dbob.*"%>
 <%@page import="java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -23,7 +22,7 @@ if (cart_list != null) {
 <html>
 <head>
 
-<title>Eva2</title>
+<title>Eva2 - Webshop</title>
 <%@include file="includes/header.jsp"%>
 </head>
 <body>

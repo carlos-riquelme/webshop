@@ -52,7 +52,8 @@ public class AddToCartServlet extends HttpServlet {
 				for(Cart c:cart_list) { 
 					if(c.getId() == id) {
 						exists = true;
-						out.println("<h3 style='color:red; text-align:center'>Item ya existe en el Carro.<a href='cart.jsp'>Ir al Carro</a></h3>");
+						out.println("<h3 style='color:red; text-align:center'>Item ya existe "
+								+ "en el Carro.<a href='cart.jsp'>Ir al Carro</a></h3>");
 					}
 
 				}
