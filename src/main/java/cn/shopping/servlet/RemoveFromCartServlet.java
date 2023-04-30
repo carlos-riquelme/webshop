@@ -32,7 +32,13 @@ public class RemoveFromCartServlet extends HttpServlet {
 			if(id!=null) {
 				ArrayList<Cart> cart_list = (ArrayList<Cart>) request.getSession().getAttribute("cart-list");
 				if(cart_list != null) {
-					for(Cart)
+					for(Cart c:cart_list) {
+						if(c.getId()==Integer.parseInt(id)) {
+							cart_list.remove(cart_list.indexOf(c));
+							break;
+						}
+					}
+					response.sendRedirect("cart.jsp");
 				}
 			} else {
 				response.sendRedirect("cart.jsp");

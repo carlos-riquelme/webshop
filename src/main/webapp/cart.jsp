@@ -48,7 +48,7 @@ if (cart_list != null) {
 	<div class="container">
 		<div class="d-flex py-3">
 			<h3>Total $ ${ (total>0)?dcf.format(total):0 }</h3>
-			<a class="mx-3 btn btn-primary" href="#">Pagar</a>
+			<a class="mx-3 btn btn-primary" href="check-out">Pagar</a>
 
 
 		</div>
@@ -70,16 +70,17 @@ if (cart_list != null) {
 				<tr>
 					<td><%= c.getName() %></td>
 					<td><%= c.getCategory() %></td>
-					<td>$ <%= dcf.format(c.getPrice()) %></td>
+					<td>$ <%= c.getPrice() %></td>
 					<td>
-						<form action="" method="post" class="form-inline">
+						<form action="order-now" method="post" class="form-inline">
 							<input type="hidden" name="id" value="<%= c.getId() %>" class="form-input">
-							<div class="d-flex justify-content-between">
+							<div class="d-flex justify-content-between w-50">
 								<a href="quantity-inc-dec?action=dec&id=<%= c.getId() %>" class="btn btn-sm btn-decre"><i
 									class="fas fa-minus-square"></i></a> <input type="text"
-									name="cantidad" class="form-control" value="<%= c.getCantidad() %>" readonly>
+									name="cantidad" class="form-control w-50" value="<%= c.getCantidad() %>" readonly>
 								<a href="quantity-inc-dec?action=inc&id=<%= c.getId() %>" class="btn btn-sm btn-incre"><i
 									class="fas fa-plus-square"></i></a>
+							<button type="submit" class="btn btn-sm btn-primary">Comprar</button>
 							</div>
 						</form>
 					</td>

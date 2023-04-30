@@ -44,7 +44,7 @@ if (cart_list != null) {
 							<h6 class="category">Categoría: <%= p.getCategory() %></h6>
 							<div class="mt-3 d-flex justify-content-between">
 							<a href="add-to-cart?id=<%= p.getId() %>" class="btn btn-dark">Añadir al carro</a>
-							<a href="#" class="btn btn-primary">Comprar ahora</a>
+							<a href="order-now?cantidad=1&id=<%= p.getId()  %>" class="btn btn-primary">Comprar ahora</a>
 							</div>
 						</div>
 					</div>
